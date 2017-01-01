@@ -3,7 +3,7 @@ import java.util.*;
 import Lab3Help.*;
 
 
-public class main {
+public class Lab3 {
 	
 	/*
 	
