@@ -3,17 +3,20 @@ import java.util.*;
 import Lab3Help.*;
 
 
-public class Lab3 {
-
+public class main {
+	
+	/*
+	
+	*/
 	public static void main(String[] args) throws MalformedData, IOException{
 		
 		Lab3File l3f = new Lab3File();
-        ArrayList<BStop>      bstops = new ArrayList<BStop>(l3f.readStops(args[0]));
-        ArrayList<BLineTable> btable = new ArrayList<BLineTable>(l3f.readLines(args[1]));
+        ArrayList<BStop>      bstops = new ArrayList<BStop>(l3f.readStops("stops-gbg.txt"));
+        ArrayList<BLineTable> btable = new ArrayList<BLineTable>(l3f.readLines("lines-gbg.txt"));
         
         DijkstraStringPath p = new DijkstraStringPath(bstops, btable);
         
-        p.computePath(args[2], args[3]);
+        p.computePath("Angered", "Botaniska");
         int pathLength = p.getPathLength();
         System.out.println(pathLength);
         
